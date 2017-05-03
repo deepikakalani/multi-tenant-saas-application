@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+    <title><%= message %></title>
+    
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  <center><h3><%= message %></h3><center>
+  <div class="row">
+  <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Class Diagram</small></h3>
+      </div>
+      
+ 	  <div class="panel-body">
+      <p>Please select a tenant from dropdown</p>
+
+      <form id="tableForm" action="/generateuml" method="post" enctype="multipart/form-data">
+    	<select id="choosetenant" class="selectpicker" data-style="btn-info" name="selectpicker">
+        <optgroup label="select tenant">
+        
+ 		        <option id = "Tenant1" value = "Tenant1">Tenant1 </option>
+          		<option id = "Tenant2" value = "Tenant2">Tenant2 </option>
+          		<option id = "Tenant3" value = "Tenant3">Tenant3 </option>
+          		<option id = "Tenant4" value = "Tenant4">Tenant4 </option>
+             
+        </optgroup>      
+    	</select>
+    	<br>	
+        <label for=file_upload>Upload File</label>
+        
+            <input type="file" id ='file_upload' name="file_upload"  placeholder="Upload File">       
+    	
+    	
+    		<input type = "submit" class = "btn btn-primary" data-toggle = "button">
+			<input type = "hidden" name = "diagram_type" value="class">
+		</form>
+		</div>
+    </div>
+    </div>
+    </div>
+    
+   <div class="row">
+  <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Sequence Diagram</small></h3>
+      </div>
+      
+ 	  <div class="panel-body">
+      <p>Please select a tenant from dropdown</p>
+
+      <form id="sequenceForm" action="/generateuml" method="post" enctype="multipart/form-data">
+    	<select id="choosetenant" class="selectpicker" data-style="btn-info" name="selectpicker">
+        <optgroup label="select tenant">
+        
+ 		        <option id = "Tenant1" value = "Tenant1">Tenant1 </option>
+          		<option id = "Tenant2" value = "Tenant2">Tenant2 </option>
+          		<option id = "Tenant3" value = "Tenant3">Tenant3 </option>
+          		<option id = "Tenant4" value = "Tenant4">Tenant4 </option>
+             
+        </optgroup>      
+    	</select>
+    	<br>	
+        <label for=file_upload>Upload File</label>
+        
+            <input type="file" id ='file_upload' name="file_upload"  placeholder="Upload File">       
+    	
+    	
+    		<input type = "submit" class = "btn btn-primary" data-toggle = "button">
+			<input type = "hidden" name ="diagram_type" value="sequence">
+		</form>
+    </div>
+    </div>
+
+  </body>
+</html>
